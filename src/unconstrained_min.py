@@ -10,9 +10,9 @@ class UnconstrainedMinimizer:
             method (str): The optimization method to use ('newton' or 'gradient_descent')
         """
         self.method = method.lower()
-        self.iterations = []
-        self.f_values = []
-        
+        self.iterations: List[np.ndarray] = []
+        self.f_values: List[float] = []
+    
     def minimize(self, 
                 f: Callable,
                 x0: np.ndarray,
@@ -23,7 +23,7 @@ class UnconstrainedMinimizer:
         Minimize an unconstrained objective function using line search.
         
         Args:
-            f: The objective function that returns (f, g, h) - value, gradient, and optionally Hessian
+            f: The objective function that returns (f, g, h) - value, gradient, and Hessian
             x0: Initial point
             obj_tol: Tolerance for change in objective value
             param_tol: Tolerance for parameter changes
@@ -36,43 +36,31 @@ class UnconstrainedMinimizer:
             - Success flag
         """
         x = x0.copy()
-        f_val, g, h = f(x, True)  # Initial evaluation
+        f_val, g, h = f(x, True)
         self.iterations = [x.copy()]
         self.f_values = [f_val]
         
         for i in range(max_iter):
-            # Get search direction based on method
             if self.method == 'newton' and h is not None:
-                # Solve system instead of inverting matrix
                 d = np.linalg.solve(h, -g)
-            else:  # gradient descent
+            else:
                 d = -g
-                
-            # Backtracking line search with Wolfe conditions
             alpha = self._backtracking_line_search(f, x, f_val, g, d)
-            
-            # Update position
             x_new = x + alpha * d
             f_new, g_new, h_new = f(x_new, True)
-            
-            # Store iteration history
             self.iterations.append(x_new.copy())
             self.f_values.append(f_new)
-            
-            # Print iteration info
             print(f"Iteration {i}: x = {x_new}, f(x) = {f_new}")
-            
-            # Check convergence
             if abs(f_new - f_val) < obj_tol:
+                print(f"Converged: obj_tol reached (|f_new - f_old| = {abs(f_new - f_val):.2e})")
                 return x_new, f_new, True
             if np.linalg.norm(x_new - x) < param_tol:
+                print(f"Converged: param_tol reached (|x_new - x| = {np.linalg.norm(x_new - x):.2e})")
                 return x_new, f_new, True
-                
-            # Update for next iteration
             x, f_val, g, h = x_new, f_new, g_new, h_new
-            
+        print("Max iterations reached without convergence.")
         return x, f_val, False
-    
+
     def _backtracking_line_search(self,
                                 f: Callable,
                                 x: np.ndarray,
@@ -81,31 +69,14 @@ class UnconstrainedMinimizer:
                                 d: np.ndarray,
                                 alpha: float = 1.0,
                                 rho: float = 0.5,
-                                c: float = 0.01) -> float:
+                                c: float = 1e-4) -> float:
         """
-        Implements backtracking line search with Wolfe conditions.
-        
-        Args:
-            f: Objective function
-            x: Current point
-            f_x: Current function value
-            g: Current gradient
-            d: Search direction
-            alpha: Initial step size
-            rho: Backtracking factor
-            c: Wolfe condition constant
-            
-        Returns:
-            Step size that satisfies Wolfe conditions
+        Implements backtracking line search with Armijo condition only.
         """
-        g_d = g.dot(d)  # Directional derivative
-        
+        g_d = g.dot(d)
         while True:
             x_new = x + alpha * d
             f_new, _, _ = f(x_new, False)
-            
-            # Armijo condition
             if f_new <= f_x + c * alpha * g_d:
                 return alpha
-                
             alpha *= rho 

@@ -1,0 +1,37 @@
+Iter 1: Newton direction d = [-0.01005025 -0.9798995 ], norm(d) = 9.800e-01, Hessian cond = 6.396e+00
+Iter 1: LS: alpha=1.00e+00, f_new=4.040303e+00, Armijo RHS=1.039800e+02, g.d=-1.999598e+02, g_new.d=6.060861e-02
+Iter 2: Newton direction d = [ 1.97024826 -3.97999849], norm(d) = 4.441e+00, Hessian cond = 2.539e+03
+Iter 2: LS: alpha=1.00e+00, f_new=1.506899e+03, Armijo RHS=4.039511e+00, g.d=-7.920598e+00, g_new.d=6.027356e+03
+Iter 2: LS: alpha=5.00e-01, f_new=9.524139e+01, Armijo RHS=4.039907e+00, g.d=-7.920598e+00, g_new.d=7.494298e+02
+Iter 2: LS: alpha=2.50e-01, f_new=8.192767e+00, Armijo RHS=4.040105e+00, g.d=-7.920598e+00, g_new.d=8.822596e+01
+Iter 2: LS: alpha=1.25e-01, f_new=3.479850e+00, Armijo RHS=4.040204e+00, g.d=-7.920598e+00, g_new.d=4.838440e+00
+Iter 2: LS: alpha=6.25e-02, f_new=3.583710e+00, Armijo RHS=4.040254e+00, g.d=-7.920598e+00, g_new.d=-5.954900e+00
+Iter 2: LS: alpha=3.12e-02, f_new=3.798087e+00, Armijo RHS=4.040278e+00, g.d=-7.920598e+00, g_new.d=-7.489362e+00
+Iter 2: LS: alpha=1.56e-02, f_new=3.917600e+00, Armijo RHS=4.040291e+00, g.d=-7.920598e+00, g_new.d=-7.773903e+00
+Iter 2: LS: alpha=7.81e-03, f_new=3.978671e+00, Armijo RHS=4.040297e+00, g.d=-7.920598e+00, g_new.d=-7.855859e+00
+Iter 2: LS: alpha=3.91e-03, f_new=4.009424e+00, Armijo RHS=4.040300e+00, g.d=-7.920598e+00, g_new.d=-7.889303e+00
+Iter 2: LS: alpha=1.95e-03, f_new=4.024848e+00, Armijo RHS=4.040301e+00, g.d=-7.920598e+00, g_new.d=-7.905084e+00
+Iter 2: LS: alpha=9.77e-04, f_new=4.032572e+00, Armijo RHS=4.040302e+00, g.d=-7.920598e+00, g_new.d=-7.912858e+00
+Iter 2: LS: alpha=4.88e-04, f_new=4.036436e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.916730e+00
+Iter 2: LS: alpha=2.44e-04, f_new=4.038370e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.918664e+00
+Iter 2: LS: alpha=1.22e-04, f_new=4.039336e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.919631e+00
+Iter 2: LS: alpha=6.10e-05, f_new=4.039820e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920115e+00
+Iter 2: LS: alpha=3.05e-05, f_new=4.040061e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920356e+00
+Iter 2: LS: alpha=1.53e-05, f_new=4.040182e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920477e+00
+Iter 2: LS: alpha=7.63e-06, f_new=4.040243e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920538e+00
+Iter 2: LS: alpha=3.81e-06, f_new=4.040273e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920568e+00
+Iter 2: LS: alpha=1.91e-06, f_new=4.040288e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920583e+00
+Iter 2: LS: alpha=9.54e-07, f_new=4.040295e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920591e+00
+Iter 2: LS: alpha=4.77e-07, f_new=4.040299e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920594e+00
+Iter 2: LS: alpha=2.38e-07, f_new=4.040301e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920596e+00
+Iter 2: LS: alpha=1.19e-07, f_new=4.040302e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920597e+00
+Iter 2: LS: alpha=5.96e-08, f_new=4.040303e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920598e+00
+Iter 2: LS: alpha=2.98e-08, f_new=4.040303e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920598e+00
+Iter 2: LS: alpha=1.49e-08, f_new=4.040303e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920598e+00
+Iter 2: LS: alpha=7.45e-09, f_new=4.040303e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920598e+00
+Iter 2: LS: alpha=3.73e-09, f_new=4.040303e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920598e+00
+Iter 2: LS: alpha=1.86e-09, f_new=4.040303e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920598e+00
+Iter 2: LS: alpha=9.31e-10, f_new=4.040303e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920598e+00
+Iter 2: LS: alpha=4.66e-10, f_new=4.040303e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920598e+00
+Iter 2: LS: alpha=2.33e-10, f_new=4.040303e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920598e+00
+Iter 2: LS: alpha=1.16e-10, f_new=4.040303e+00, Armijo RHS=4.040303e+00, g.d=-7.920598e+00, g_new.d=-7.920598e+00
