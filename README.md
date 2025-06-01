@@ -1,46 +1,22 @@
-# Numerical Optimization - Programming Assignment 01
+# Numerical Optimization – Assignment 01
 
-This repository contains the implementation of an unconstrained optimization solver supporting both Newton and Gradient Descent methods with backtracking line search.
+This repository contains a modular Python solver for unconstrained minimization using Gradient Descent and Newton's method with backtracking line search (Armijo condition).
 
-## Project Structure
+## How to Run
 
-```
-.
-├── src/
-│   ├── unconstrained_min.py  # Main solver implementation
-│   └── utils.py              # Plotting and utility functions
-└── tests/
-    ├── examples.py           # Test functions (quadratic, Rosenbrock, etc.)
-    └── test_unconstrained_min.py  # Unit tests
-```
+1. Install dependencies:
+   - numpy
+   - matplotlib
 
-## Features
-
-- Modular implementation of unconstrained optimization solver
-- Supports both Newton and Gradient Descent methods
-- Backtracking line search with Wolfe conditions
-- Visualization of optimization paths and convergence
-- Test suite with various objective functions:
-  - Quadratic functions (circular, axis-aligned ellipses, rotated ellipses)
-  - Rosenbrock function
-  - Linear function
-  - Exponential function
-
-## Dependencies
-
-- NumPy
-- Matplotlib
-
-## Usage
-
-To run the tests:
-
+2. Run all tests and generate plots:
 ```bash
 python -m unittest tests/test_unconstrained_min.py
 ```
 
-## Implementation Details
+## Structure
+- `src/` : Solver and utilities
+- `tests/` : Test suite and example functions
+- `test_results/` : Output plots for the report
 
-- The solver never inverts matrices directly, instead using linear system solvers
-- Generic implementation supporting arbitrary dimensions (not limited to 2D)
-- Modular design allowing easy addition of new search direction methods 
+## Author
+Sinai Abbou (ID: 340858844) 
