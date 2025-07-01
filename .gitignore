@@ -33,6 +33,3 @@ ENV/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-
-# Matplotlib
-*.png 
