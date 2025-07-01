@@ -1,22 +1,39 @@
-# Numerical Optimization – Assignment 01
+# HW02 – Interior Point Method
 
-This repository contains a modular Python solver for unconstrained minimization using Gradient Descent and Newton's method with backtracking line search (Armijo condition).
+Author: Sinai Abbou
 
-## How to Run
+## Project Structure
 
-1. Install dependencies:
-   - numpy
-   - matplotlib
+ex1_programming_nop/
+    src/
+        __pycache__/
+        __init__.py
+        constrained_min.py
+        unconstrained_min.py
+        utils.py
+    test_results/
+    tests/
+        __pycache__/
+        __init__.py
+        examples.py
+        plot_hw02.py
+        test_constrained_min.py
+        test_unconstrained_min.py
+    venv/
+    .gitignore
+    lp_feasible_and_path.png
+    lp_objective_vs_iteration.png
+    qp_feasible_and_path.png
+    qp_objective_vs_iteration.png
+    README.md
+    requirements.txt
 
-2. Run all tests and generate plots:
-```bash
-python -m unittest tests/test_unconstrained_min.py
-```
+## Usage
 
-## Structure
-- `src/` : Solver and utilities
-- `tests/` : Test suite and example functions
-- `test_results/` : Output plots for the report
+- Run tests:
+    python -m unittest tests/test_constrained_min.py
 
-## Author
-Sinai Abbou (ID: 340858844) 
+- Generate plots/results:
+    python tests/plot_hw02.py
+
+All results and plots are saved in the project root.
