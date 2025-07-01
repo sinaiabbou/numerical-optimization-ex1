@@ -2,38 +2,23 @@
 
 Author: Sinai Abbou
 
-## Project Structure
+## Important files (HW02)
 
-ex1_programming_nop/
-src/
-pycache/
-init.py
-constrained_min.py
-unconstrained_min.py
-utils.py
-test_results/
-tests/
-pycache/
-init.py
-examples.py
-plot_hw02.py
-test_constrained_min.py
-test_unconstrained_min.py
-venv/
-.gitignore
-lp_feasible_and_path.png
-lp_objective_vs_iteration.png
-qp_feasible_and_path.png
-qp_objective_vs_iteration.png
-README.md
-requirements.txt
+- `src/constrained_min.py` – Interior point (log-barrier) method implementation for constrained optimization.
+- `src/unconstrained_min.py` – Unconstrained minimization (from HW01, required for the solver).
+- `tests/examples.py` – Defines LP and QP problems for HW02.
+- `tests/test_constrained_min.py` – Unit tests for HW02 (LP and QP).
+- `tests/plot_hw02.py` – Script to generate required plots and print solution/constraint info.
+- `lp_feasible_and_path.png`, `lp_objective_vs_iteration.png`, `qp_feasible_and_path.png`, `qp_objective_vs_iteration.png` – Plots generated for HW02 report.
 
-## Usage
+## How to use
 
-- Run tests:  
+- Run all tests:  
   `python -m unittest tests/test_constrained_min.py`
 
-- Generate plots/results:  
+- Generate plots and print final results:  
   `python tests/plot_hw02.py`
 
 All results and plots are saved in the project root.
+
+**GitHub repo:** https://github.com/sinaiabbou/numerical-optimization-ex1
